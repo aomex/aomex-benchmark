@@ -27,4 +27,14 @@ router.post('/users', bodyParser(), (ctx) => {
   };
 });
 
+router.get('/users/:id', (ctx) => {
+  const id = Number(ctx.params.id);
+  if (Number.isNaN(id) || !Number.isInteger(id)) {
+    ctx.throw(400, '必须是整数');
+  }
+
+  ctx.status = 200;
+  ctx.body = { id: id };
+});
+
 export const koaRouter = router.routes();

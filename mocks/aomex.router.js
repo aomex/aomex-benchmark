@@ -1,6 +1,6 @@
 import { rule } from '@aomex/core';
 import { Router } from '@aomex/router';
-import { body } from '@aomex/web';
+import { body, params } from '@aomex/web';
 
 export const aomexRouter = new Router();
 
@@ -24,6 +24,21 @@ aomexRouter.post('/users', {
       id: 1,
       name: name,
       age: age,
+    });
+  },
+});
+
+aomexRouter.get('/users/:id', {
+  mount: [
+    params({
+      id: rule.int(),
+    }),
+  ],
+  action: (ctx) => {
+    const { id } = ctx.params;
+
+    ctx.send(200, {
+      id: id,
     });
   },
 });
