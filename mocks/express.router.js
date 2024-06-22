@@ -4,6 +4,7 @@ import bodyParser from 'body-parser';
 export const expressRouter = Router();
 
 expressRouter.get('/', (_, res) => {
+  res.contentType('text');
   res.status(200).send('hello world');
 });
 
