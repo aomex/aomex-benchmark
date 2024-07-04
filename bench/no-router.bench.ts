@@ -1,7 +1,7 @@
 import { bench } from 'vitest';
 import { describe } from 'node:test';
 import supertest from 'supertest';
-import { mdchain, middleware } from '@aomex/core';
+import { middleware } from '@aomex/core';
 import type TestAgent from 'supertest/lib/agent';
 import Koa from 'koa';
 import express from 'express';
@@ -60,11 +60,11 @@ describe('原始请求', async () => {
         if (type === 'run') return;
 
         const app = new WebApp({
-          mount: mdchain.web.mount(
+          mount: [
             middleware.web((ctx) => {
               ctx.send(200, 'hello world');
             }),
-          ),
+          ],
         });
         aomexAgent = supertest.agent(app.listen());
         await aomexAgent.get('/').expect(200, 'hello world');

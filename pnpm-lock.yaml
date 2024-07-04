@@ -9,14 +9,14 @@ importers:
   .:
     dependencies:
       '@aomex/core':
-        specifier: ^1.0.4
-        version: 1.0.4(@types/node@20.14.1)(typescript@5.4.5)
+        specifier: ^1.5.1
+        version: 1.5.1(@types/node@20.14.1)(typescript@5.4.5)
       '@aomex/router':
-        specifier: ^1.0.4
-        version: 1.0.4(@aomex/core@1.0.4(@types/node@20.14.1)(typescript@5.4.5))(@aomex/web@1.0.4(@aomex/core@1.0.4(@types/node@20.14.1)(typescript@5.4.5)))
+        specifier: ^1.5.1
+        version: 1.5.1(@aomex/core@1.5.1(@types/node@20.14.1)(typescript@5.4.5))(@aomex/web@1.5.1(@aomex/core@1.5.1(@types/node@20.14.1)(typescript@5.4.5)))
       '@aomex/web':
-        specifier: ^1.0.4
-        version: 1.0.4(@aomex/core@1.0.4(@types/node@20.14.1)(typescript@5.4.5))
+        specifier: ^1.5.1
+        version: 1.5.1(@aomex/core@1.5.1(@types/node@20.14.1)(typescript@5.4.5))
       '@koa/bodyparser':
         specifier: ^5.1.1
         version: 5.1.1(koa@2.15.3)
@@ -65,27 +65,31 @@ importers:
 
 packages:
 
-  '@aomex/core@1.0.4':
-    resolution: {integrity: sha512-Z/bq8RWAziaz7PDZq9fCRT4r16SC/WKTuYnv2uUDXNl2iBO/ugl4ZnrRW3o57EHiXt3MwuyQZyDBFDeWhq1CDA==}
+  '@aomex/core@1.5.1':
+    resolution: {integrity: sha512-GFJ6R6b5K1nQKw0TObla6ZfpD4eTwLKOFMPzbzGFW0PvO8TTetNqfwMO9QVZoP5GAK4miY1CZTT7lGR4+1EFqw==}
     engines: {node: ^20.13.0 || ^22}
     peerDependencies:
       '@types/node': ^20 || ^22
       typescript: '>=5.4'
 
-  '@aomex/internal-file-import@1.0.4':
-    resolution: {integrity: sha512-7rWyE1BafjCQji8NhPd8mc9UlgPkkkIBYuPzgnBJ/UX02KcVXmWH9zoHeODaqDxLUe+tMVmzniph0M+wjJ39tA==}
+  '@aomex/internal-file-import@1.5.1':
+    resolution: {integrity: sha512-UYrgLhistM2VXPr1qbH98R01xiyhTCICyLR59hMYViKjBnU48OgaAvpwJnBw61v+SLA5PV93u+NHyR2WSlYlVA==}
+    engines: {node: ^20.13.0 || ^22}
 
-  '@aomex/internal-tools@1.0.4':
-    resolution: {integrity: sha512-4PIP59RhEMmjir4EinhEpe73aMcW7bA0r4Ckn/naiZo1Xgu0Uy37tSkp2XPMp/xRg8zh/RoCvvmtnsNIsJF/8Q==}
+  '@aomex/internal-tools@1.5.1':
+    resolution: {integrity: sha512-hiN6+vRjZJ0rj/WqPZlezCv7sXoUbtb7StiQXhgWMSmC935i5JcCUwjVuE2KP9CDzNtLAHpjj4sTwRZkMdvhWA==}
+    engines: {node: ^20.13.0 || ^22}
 
-  '@aomex/router@1.0.4':
-    resolution: {integrity: sha512-sh2CgJy5Y27teqPzua1ejjSqe2oSiwxV8iJzkn+bf879bcVkXbzS54xTPm2tf6lcLPJUipmsp4Kpau6+8bqPYg==}
+  '@aomex/router@1.5.1':
+    resolution: {integrity: sha512-aMtHv3KcWBjdXyrsHRJ3Ie7RKfdELfna5UieF1m2lU+cl6oIZi8jvpHT24pMCMp5x3jn0vJkR8OngPTa/oqAPQ==}
+    engines: {node: ^20.13.0 || ^22}
     peerDependencies:
       '@aomex/core': ^1.0.0
       '@aomex/web': ^1.0.0
 
-  '@aomex/web@1.0.4':
-    resolution: {integrity: sha512-xU6ClzQaS0vLpRgAZeGVX66KUY2L9Qwx9UOVUyExtrQ1Ajfibk6mqUr8Z5Lw/w2wg75Dlhi2CJjGOSkvnY9p0A==}
+  '@aomex/web@1.5.1':
+    resolution: {integrity: sha512-qZOWoYToQpB1LRJvXf18aB9sLWHm8ZMUzsBjL2pq5QkC5ZjujMOvbGMlOD8Jd3W0YXYoD9Z/+4HUGPUHX7/CEg==}
+    engines: {node: ^20.13.0 || ^22}
     peerDependencies:
       '@aomex/core': ^1.0.0
 
@@ -667,10 +671,6 @@ packages:
     resolution: {integrity: sha512-TPJXq8JqFaVYm2CWmPvnP2Iyo4ZSM7/QKcSmuMLDObfpH5fi7RUGmd/rTDf+rut/saiDiQEeVTNgAmJEdAOx0w==}
     engines: {node: '>= 0.8'}
 
-  encodeurl@2.0.0:
-    resolution: {integrity: sha512-Q0n9HRi4m6JuGIV1eFlmvJB7ZEVxu93IrMyiMsGC0lrMJMWzRgx6WGquyfQgZVb31vhGgXnfmPNNXmxnOkRBrg==}
-    engines: {node: '>= 0.8'}
-
   es-define-property@1.0.0:
     resolution: {integrity: sha512-jxayLKShrEqqzJ0eumQbVhTYQM27CfT1T35+gCgDFoL82JLsXqTJ76zv6A0YLOgEnLUMvLzsDsGIrl8NFpT2gQ==}
     engines: {node: '>= 0.4'}
@@ -1034,6 +1034,10 @@ packages:
   path-to-regexp@6.2.2:
     resolution: {integrity: sha512-GQX3SSMokngb36+whdpRXE+3f9V8UzyAorlYvOGx87ufGHehNTn5lCxrKtLyZ4Yl/wEKnNnr98ZzOwwDZV5ogw==}
 
+  path-to-regexp@7.0.0:
+    resolution: {integrity: sha512-58Y94bQqF3zBIASFNiufRPH1NfgZth1qwZ35radL87sg8pgbVqr6uikAhqZtFD+w65MGH6SWnY/ly3GbrM4fbg==}
+    engines: {node: '>=16'}
+
   pathe@1.1.2:
     resolution: {integrity: sha512-whLdWMYL2TwI08hn8/ZqAbrVemu0LNaNNJZX73O6qaIdCTfXutsLhMkjdENX0qhsQ9uIimo4/aQOmXkoon2nDQ==}
 
@@ -1356,36 +1360,36 @@ packages:
 
 snapshots:
 
-  '@aomex/core@1.0.4(@types/node@20.14.1)(typescript@5.4.5)':
+  '@aomex/core@1.5.1(@types/node@20.14.1)(typescript@5.4.5)':
     dependencies:
-      '@aomex/internal-tools': 1.0.4
+      '@aomex/internal-tools': 1.5.1
       '@types/node': 20.14.1
       email-validator: 2.0.4
       ip-regex: 5.0.0
       openapi-types: 12.1.3
       typescript: 5.4.5
 
-  '@aomex/internal-file-import@1.0.4':
+  '@aomex/internal-file-import@1.5.1':
     dependencies:
       glob: 10.4.1
 
-  '@aomex/internal-tools@1.0.4':
+  '@aomex/internal-tools@1.5.1':
     dependencies:
       '@types/bytes': 3.1.4
       bytes: 3.1.2
 
-  '@aomex/router@1.0.4(@aomex/core@1.0.4(@types/node@20.14.1)(typescript@5.4.5))(@aomex/web@1.0.4(@aomex/core@1.0.4(@types/node@20.14.1)(typescript@5.4.5)))':
+  '@aomex/router@1.5.1(@aomex/core@1.5.1(@types/node@20.14.1)(typescript@5.4.5))(@aomex/web@1.5.1(@aomex/core@1.5.1(@types/node@20.14.1)(typescript@5.4.5)))':
     dependencies:
-      '@aomex/core': 1.0.4(@types/node@20.14.1)(typescript@5.4.5)
-      '@aomex/internal-file-import': 1.0.4
-      '@aomex/internal-tools': 1.0.4
-      '@aomex/web': 1.0.4(@aomex/core@1.0.4(@types/node@20.14.1)(typescript@5.4.5))
-      path-to-regexp: 6.2.2
+      '@aomex/core': 1.5.1(@types/node@20.14.1)(typescript@5.4.5)
+      '@aomex/internal-file-import': 1.5.1
+      '@aomex/internal-tools': 1.5.1
+      '@aomex/web': 1.5.1(@aomex/core@1.5.1(@types/node@20.14.1)(typescript@5.4.5))
+      path-to-regexp: 7.0.0
 
-  '@aomex/web@1.0.4(@aomex/core@1.0.4(@types/node@20.14.1)(typescript@5.4.5))':
+  '@aomex/web@1.5.1(@aomex/core@1.5.1(@types/node@20.14.1)(typescript@5.4.5))':
     dependencies:
-      '@aomex/core': 1.0.4(@types/node@20.14.1)(typescript@5.4.5)
-      '@aomex/internal-tools': 1.0.4
+      '@aomex/core': 1.5.1(@types/node@20.14.1)(typescript@5.4.5)
+      '@aomex/internal-tools': 1.5.1
       '@types/accepts': 1.3.7
       '@types/content-disposition': 0.5.8
       '@types/cookie': 0.6.0
@@ -1396,15 +1400,11 @@ snapshots:
       accepts: 1.3.8
       co-body: 6.2.0
       content-disposition: 0.5.4
-      content-type: 1.0.5
       cookie: 0.6.0
       destroy: 1.2.0
-      encodeurl: 2.0.0
-      escape-html: 1.0.3
       formidable: 3.5.1
       fresh: 0.5.2
       http-errors: 2.0.0
-      lru-cache: 10.2.2
       mime-types: 2.1.35
       qs: 6.12.1
       request-ip: 3.3.0
@@ -1927,8 +1927,6 @@ snapshots:
 
   encodeurl@1.0.2: {}
 
-  encodeurl@2.0.0: {}
-
   es-define-property@1.0.0:
     dependencies:
       get-intrinsic: 1.2.4
@@ -2352,6 +2350,8 @@ snapshots:
   path-to-regexp@0.1.7: {}
 
   path-to-regexp@6.2.2: {}
+
+  path-to-regexp@7.0.0: {}
 
   pathe@1.1.2: {}
 

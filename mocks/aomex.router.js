@@ -24,6 +24,11 @@ aomexRouter.post('/users', {
       id: 1,
       name: name,
       age: age,
+      foo: {
+        bar: {
+          baz: 1,
+        },
+      },
     });
   },
 });
@@ -37,8 +42,6 @@ aomexRouter.get('/users/:id', {
   action: (ctx) => {
     const { id } = ctx.params;
 
-    ctx.send(200, {
-      id: id,
-    });
+    ctx.send(200, { id: id });
   },
 });

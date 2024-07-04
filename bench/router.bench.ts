@@ -4,7 +4,6 @@ import Koa from 'koa';
 import express from 'express';
 import { WebApp } from '@aomex/web';
 import supertest from 'supertest';
-import { mdchain } from '@aomex/core';
 import { koaRouter } from '../mocks/koa.router';
 import { expressRouter } from '../mocks/express.router';
 import { routers } from '@aomex/router';
@@ -56,7 +55,7 @@ describe('GET /', async () => {
         if (type === 'run') return;
 
         const app = new WebApp({
-          mount: mdchain.web.mount(routers('./mocks/aomex.router.js')),
+          mount: [routers('./mocks/aomex.router.js')],
         });
         aomexAgent = supertest.agent(app.listen());
         await aomexAgent.get('/').expect(200, 'hello world');
@@ -84,7 +83,16 @@ describe('POST /users', async () => {
         await koaAgent
           .post('/users')
           .send({ name: 'jim', age: 10 })
-          .expect(201, { id: 1, name: 'jim', age: 10 });
+          .expect(201, {
+            id: 1,
+            name: 'jim',
+            age: 10,
+            foo: {
+              bar: {
+                baz: 1,
+              },
+            },
+          });
       },
     },
   );
@@ -103,7 +111,16 @@ describe('POST /users', async () => {
         await expressAgent
           .post('/users')
           .send({ name: 'jim', age: 10 })
-          .expect(201, { id: 1, name: 'jim', age: 10 });
+          .expect(201, {
+            id: 1,
+            name: 'jim',
+            age: 10,
+            foo: {
+              bar: {
+                baz: 1,
+              },
+            },
+          });
       },
     },
   );
@@ -118,13 +135,22 @@ describe('POST /users', async () => {
         if (type === 'run') return;
 
         const app = new WebApp({
-          mount: mdchain.web.mount(routers('./mocks/aomex.router.js')),
+          mount: [routers('./mocks/aomex.router.js')],
         });
         aomexAgent = supertest.agent(app.listen());
         await aomexAgent
           .post('/users')
           .send({ name: 'jim', age: 10 })
-          .expect(201, { id: 1, name: 'jim', age: 10 });
+          .expect(201, {
+            id: 1,
+            name: 'jim',
+            age: 10,
+            foo: {
+              bar: {
+                baz: 1,
+              },
+            },
+          });
       },
     },
   );
@@ -177,7 +203,7 @@ describe('GET /users/:id', async () => {
         if (type === 'run') return;
 
         const app = new WebApp({
-          mount: mdchain.web.mount(routers('./mocks/aomex.router.js')),
+          mount: [routers('./mocks/aomex.router.js')],
         });
         aomexAgent = supertest.agent(app.listen());
         await aomexAgent.get('/users/123').expect(200, { id: 123 });

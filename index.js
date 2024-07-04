@@ -1,10 +1,10 @@
 import { mdchain } from '@aomex/core';
 import { routers } from '@aomex/router';
 import { WebApp } from '@aomex/web';
-import { expressRouter } from './mocks/express.router';
+import { expressRouter } from './mocks/express.router.js';
 import express from 'express';
 import Koa from 'koa';
-import { koaRouter } from './mocks/koa.router';
+import { koaRouter } from './mocks/koa.router.js';
 
 {
   const app = new Koa();

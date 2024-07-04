@@ -24,6 +24,11 @@ router.post('/users', bodyParser(), (ctx) => {
     id: 1,
     name: name,
     age: age,
+    foo: {
+      bar: {
+        baz: 1,
+      },
+    },
   };
 });
 

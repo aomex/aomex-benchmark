@@ -25,6 +25,11 @@ expressRouter.post('/users', bodyParser.json(), (req, res) => {
     id: 1,
     name: name,
     age: age,
+    foo: {
+      bar: {
+        baz: 1,
+      },
+    },
   });
 });
 
