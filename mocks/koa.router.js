@@ -3,6 +3,44 @@ import bodyParser from '@koa/bodyparser';
 
 const router = new Router();
 
+for (let i = 0; i < 100; ++i) {
+  router.get('/x/' + i, (ctx) => {
+    ctx.status = 200;
+    ctx.body = 'hello world';
+  });
+  router.get('/x/:id/' + i, (ctx) => {
+    ctx.status = 200;
+    ctx.body = 'hello world';
+  });
+
+  router.post('/x/' + i, (ctx) => {
+    ctx.status = 200;
+    ctx.body = 'hello world';
+  });
+  router.post('/x/:id/' + i, (ctx) => {
+    ctx.status = 200;
+    ctx.body = 'hello world';
+  });
+
+  router.put('/x/' + i, (ctx) => {
+    ctx.status = 200;
+    ctx.body = 'hello world';
+  });
+  router.put('/x/:id/' + i, (ctx) => {
+    ctx.status = 200;
+    ctx.body = 'hello world';
+  });
+
+  router.delete('/x/' + i, (ctx) => {
+    ctx.status = 200;
+    ctx.body = 'hello world';
+  });
+  router.delete('/x/:id/' + i, (ctx) => {
+    ctx.status = 200;
+    ctx.body = 'hello world';
+  });
+}
+
 router.get('/', (ctx) => {
   ctx.status = 200;
   ctx.body = 'hello world';

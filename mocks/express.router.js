@@ -3,6 +3,44 @@ import bodyParser from 'body-parser';
 
 export const expressRouter = Router();
 
+for (let i = 0; i < 100; ++i) {
+  expressRouter.get('/x/' + i, (_, res) => {
+    res.contentType('text');
+    res.status(200).send('hello world');
+  });
+  expressRouter.get('/x/:id/' + i, (_, res) => {
+    res.contentType('text');
+    res.status(200).send('hello world');
+  });
+
+  expressRouter.post('/x/' + i, (_, res) => {
+    res.contentType('text');
+    res.status(200).send('hello world');
+  });
+  expressRouter.post('/x/:id/' + i, (_, res) => {
+    res.contentType('text');
+    res.status(200).send('hello world');
+  });
+
+  expressRouter.put('/x/' + i, (_, res) => {
+    res.contentType('text');
+    res.status(200).send('hello world');
+  });
+  expressRouter.put('/x/:id/' + i, (_, res) => {
+    res.contentType('text');
+    res.status(200).send('hello world');
+  });
+
+  expressRouter.delete('/x/' + i, (_, res) => {
+    res.contentType('text');
+    res.status(200).send('hello world');
+  });
+  expressRouter.delete('/x/:id/' + i, (_, res) => {
+    res.contentType('text');
+    res.status(200).send('hello world');
+  });
+}
+
 expressRouter.get('/', (_, res) => {
   res.contentType('text');
   res.status(200).send('hello world');

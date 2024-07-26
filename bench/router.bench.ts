@@ -2,11 +2,10 @@ import TestAgent from 'supertest/lib/agent';
 import { bench, describe } from 'vitest';
 import Koa from 'koa';
 import express from 'express';
-import { WebApp } from '@aomex/web';
+import { WebApp, routers } from '@aomex/web';
 import supertest from 'supertest';
 import { koaRouter } from '../mocks/koa.router';
 import { expressRouter } from '../mocks/express.router';
-import { routers } from '@aomex/router';
 
 describe('GET /', async () => {
   let aomexAgent: TestAgent;

@@ -1,8 +1,52 @@
 import { rule } from '@aomex/core';
-import { Router } from '@aomex/router';
-import { body, params } from '@aomex/web';
+import { body, params, Router } from '@aomex/web';
 
 export const aomexRouter = new Router();
+
+for (let i = 0; i < 100; ++i) {
+  aomexRouter.get('/x/' + i, {
+    action: (ctx) => {
+      ctx.send(200, 'hello world');
+    },
+  });
+  aomexRouter.get('/x/:id/' + i, {
+    action: (ctx) => {
+      ctx.send(200, 'hello world');
+    },
+  });
+  aomexRouter.post('/x/' + i, {
+    action: (ctx) => {
+      ctx.send(200, 'hello world');
+    },
+  });
+  aomexRouter.post('/x/:id/' + i, {
+    action: (ctx) => {
+      ctx.send(200, 'hello world');
+    },
+  });
+
+  aomexRouter.put('/x/' + i, {
+    action: (ctx) => {
+      ctx.send(200, 'hello world');
+    },
+  });
+  aomexRouter.put('/x/:id/' + i, {
+    action: (ctx) => {
+      ctx.send(200, 'hello world');
+    },
+  });
+
+  aomexRouter.delete('/x/' + i, {
+    action: (ctx) => {
+      ctx.send(200, 'hello world');
+    },
+  });
+  aomexRouter.delete('/x/:id/' + i, {
+    action: (ctx) => {
+      ctx.send(200, 'hello world');
+    },
+  });
+}
 
 aomexRouter.get('/', {
   action: (ctx) => {
